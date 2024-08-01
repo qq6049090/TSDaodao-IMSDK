@@ -624,8 +624,8 @@ func (c *Config) ConfigureWithViper(vp *viper.Viper) {
 	c.AliyunInternationalSMS.AccessSecret = c.getString("aliyunInternationalSMS.accessSecret", c.AliyunInternationalSMS.AccessSecret)
 	c.AliyunInternationalSMS.SignName = c.getString("aliyunInternationalSMS.signName", c.AliyunInternationalSMS.SignName)
 	// 声网配置
-	c.SWRtc.appID = c.getString("swRtc.appID", c.SWRtc.appID)
-	c.SWRtc.appCertificate = c.getString("swRtc.appCertificate", c.SWRtc.appCertificate)
+	c.SWRtc.AppID = c.getString("swRtc.appID", c.SWRtc.AppID)
+	c.SWRtc.AppCertificate = c.getString("swRtc.appCertificate", c.SWRtc.AppCertificate)
 
 	//#################### 悟空IM ####################
 	c.WuKongIM.APIURL = c.getString("wukongIM.apiURL", c.WuKongIM.APIURL)
@@ -963,8 +963,8 @@ type AliyunSMSConfig struct {
 
 // RtcConfig 声网配置
 type RtcConfig struct {
-	appID          string // 声网appId
-	appCertificate string // 声网appCert
+	AppID          string // 声网appId
+	AppCertificate string // 声网appCert
 }
 
 // aliyun oss
