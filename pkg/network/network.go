@@ -9,7 +9,7 @@ import (
 	"net/url"
 	"strings"
 
-	"github.com/TangSengDaoDao/TangSengDaoDaoServerLib/pkg/util"
+	"github.com/qq6049090/TSDaodao-IMSDK/pkg/util"
 	"github.com/sendgrid/rest"
 )
 

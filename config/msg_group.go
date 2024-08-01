@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/TangSengDaoDao/TangSengDaoDaoServerLib/common"
-	"github.com/TangSengDaoDao/TangSengDaoDaoServerLib/pkg/util"
+	"github.com/qq6049090/TSDaodao-IMSDK/common"
+	"github.com/qq6049090/TSDaodao-IMSDK/pkg/util"
 )
 
 // SendGroupCreate 发送群创建的消息

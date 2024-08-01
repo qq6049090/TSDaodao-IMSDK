@@ -1,7 +1,7 @@
 package config
 
 import (
-	"github.com/TangSengDaoDao/TangSengDaoDaoServerLib/common"
+	"github.com/qq6049090/TSDaodao-IMSDK/common"
 	"go.uber.org/zap"
 )
 

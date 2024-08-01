@@ -7,9 +7,9 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/TangSengDaoDao/TangSengDaoDaoServerLib/config"
-	"github.com/TangSengDaoDao/TangSengDaoDaoServerLib/pkg/register"
 	"github.com/gocraft/dbr/v2"
+	"github.com/qq6049090/TSDaodao-IMSDK/config"
+	"github.com/qq6049090/TSDaodao-IMSDK/pkg/register"
 	migrate "github.com/rubenv/sql-migrate"
 )
 

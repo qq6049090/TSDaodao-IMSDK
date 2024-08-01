@@ -9,7 +9,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/TangSengDaoDao/TangSengDaoDaoServerLib/pkg/util"
+	"github.com/qq6049090/TSDaodao-IMSDK/pkg/util"
 	"github.com/spf13/cast"
 	"github.com/spf13/viper"
 	"go.uber.org/zap/zapcore"
@@ -143,6 +143,9 @@ type Config struct {
 	UniSMS                 UnismsConfig                 // unisms https://unisms.apistd.com/
 	AliyunSMS              AliyunSMSConfig              // aliyun sms
 	AliyunInternationalSMS AliyunInternationalSMSConfig // 阿里云国际短信
+
+	// 声网配置
+	RtcConfig RtcConfig
 
 	// ---------- 悟空IM ----------
 	WuKongIM struct {
@@ -620,6 +623,9 @@ func (c *Config) ConfigureWithViper(vp *viper.Viper) {
 	c.AliyunInternationalSMS.AccessKeyID = c.getString("aliyunInternationalSMS.accessKeyID", c.AliyunInternationalSMS.AccessKeyID)
 	c.AliyunInternationalSMS.AccessSecret = c.getString("aliyunInternationalSMS.accessSecret", c.AliyunInternationalSMS.AccessSecret)
 	c.AliyunInternationalSMS.SignName = c.getString("aliyunInternationalSMS.signName", c.AliyunInternationalSMS.SignName)
+	// 声网配置
+	c.RtcConfig.appID = c.getString("rtcConfig.appID", c.RtcConfig.appID)
+	c.RtcConfig.appCertificate = c.getString("rtcConfig.appCertificate", c.RtcConfig.appCertificate)
 
 	//#################### 悟空IM ####################
 	c.WuKongIM.APIURL = c.getString("wukongIM.apiURL", c.WuKongIM.APIURL)
@@ -953,6 +959,12 @@ type AliyunSMSConfig struct {
 	AccessSecret string // aliyun的AccessSecret
 	TemplateCode string // aliyun的短信模版
 	SignName     string // 签名
+}
+
+// RtcConfig 声网配置
+type RtcConfig struct {
+	appID          string // 声网appId
+	appCertificate string // 声网appCert
 }
 
 // aliyun oss

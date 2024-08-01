@@ -5,18 +5,18 @@ import (
 	"time"
 
 	"github.com/RussellLuo/timingwheel"
-	"github.com/TangSengDaoDao/TangSengDaoDaoServerLib/common"
-	"github.com/TangSengDaoDao/TangSengDaoDaoServerLib/pkg/cache"
-	"github.com/TangSengDaoDao/TangSengDaoDaoServerLib/pkg/db"
-	"github.com/TangSengDaoDao/TangSengDaoDaoServerLib/pkg/log"
-	"github.com/TangSengDaoDao/TangSengDaoDaoServerLib/pkg/pool"
-	"github.com/TangSengDaoDao/TangSengDaoDaoServerLib/pkg/redis"
-	"github.com/TangSengDaoDao/TangSengDaoDaoServerLib/pkg/wkevent"
-	"github.com/TangSengDaoDao/TangSengDaoDaoServerLib/pkg/wkhttp"
 	"github.com/bwmarrin/snowflake"
 	"github.com/gocraft/dbr/v2"
 	"github.com/olivere/elastic"
 	"github.com/opentracing/opentracing-go"
+	"github.com/qq6049090/TSDaodao-IMSDK/common"
+	"github.com/qq6049090/TSDaodao-IMSDK/pkg/cache"
+	"github.com/qq6049090/TSDaodao-IMSDK/pkg/db"
+	"github.com/qq6049090/TSDaodao-IMSDK/pkg/log"
+	"github.com/qq6049090/TSDaodao-IMSDK/pkg/pool"
+	"github.com/qq6049090/TSDaodao-IMSDK/pkg/redis"
+	"github.com/qq6049090/TSDaodao-IMSDK/pkg/wkevent"
+	"github.com/qq6049090/TSDaodao-IMSDK/pkg/wkhttp"
 )
 
 // Context 配置上下文
