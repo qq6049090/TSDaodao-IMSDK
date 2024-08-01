@@ -145,7 +145,7 @@ type Config struct {
 	AliyunInternationalSMS AliyunInternationalSMSConfig // 阿里云国际短信
 
 	// 声网配置
-	RtcConfig RtcConfig
+	swRtc RtcConfig
 
 	// ---------- 悟空IM ----------
 	WuKongIM struct {
@@ -624,8 +624,8 @@ func (c *Config) ConfigureWithViper(vp *viper.Viper) {
 	c.AliyunInternationalSMS.AccessSecret = c.getString("aliyunInternationalSMS.accessSecret", c.AliyunInternationalSMS.AccessSecret)
 	c.AliyunInternationalSMS.SignName = c.getString("aliyunInternationalSMS.signName", c.AliyunInternationalSMS.SignName)
 	// 声网配置
-	c.RtcConfig.appID = c.getString("rtcConfig.appID", c.RtcConfig.appID)
-	c.RtcConfig.appCertificate = c.getString("rtcConfig.appCertificate", c.RtcConfig.appCertificate)
+	c.swRtc.appID = c.getString("swRtc.appID", c.swRtc.appID)
+	c.swRtc.appCertificate = c.getString("swRtc.appCertificate", c.swRtc.appCertificate)
 
 	//#################### 悟空IM ####################
 	c.WuKongIM.APIURL = c.getString("wukongIM.apiURL", c.WuKongIM.APIURL)
