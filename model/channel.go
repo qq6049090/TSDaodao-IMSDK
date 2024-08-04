@@ -36,8 +36,9 @@ type ChannelResp struct {
 	Forbidden int    `json:"forbidden"` // 群是否全员禁言
 	Invite    int    `json:"invite"`    // 是否开启邀请
 
-	Flame       int `json:"flame"`        // 阅后即焚
-	FlameSecond int `json:"flame_second"` // 阅后即焚秒数
+	Flame        int `json:"flame"`          // 阅后即焚
+	FlameSecond  int `json:"flame_second"`   // 阅后即焚秒数
+	CanQuitGroup int `json:"can_quit_group"` // 阅后即焚秒数
 
 	// 此内容在扩展内容内
 	// Screenshot          int `json:"screenshot"`             // 是否开启截屏通知
