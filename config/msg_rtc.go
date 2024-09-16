@@ -27,9 +27,7 @@ func (c *Context) SendRTCCallResult(req P2pRtcMessageReq) error {
 
 	return c.SendMessage(&MsgSendReq{
 		Header: MsgHeader{
-			NoPersist: 0,
-			RedDot:    1,
-			SyncOnce:  1,
+			RedDot: 1,
 		},
 		FromUID:     req.FromUID,
 		ChannelID:   req.ToUID,
